@@ -17,8 +17,9 @@
 </div>
 
     <script type="text/babel">
-	
+
 		const words = [
+      /*
 			  {
 				"word": "a!",
 				"meaning": "a",
@@ -609,7 +610,7 @@
 				"meaning": "wile",
 				"wrongs": ["olin", "pilin", "unpa", "nena", "pona", "monsi", "ike", "ilo"]
 			  },
-			  
+
 			  {
 				"word": "alasa",
 				"meaning": "alasa",
@@ -635,15 +636,70 @@
 				"meaning": "kijetesantakalu",
 				"wrongs": ["soweli", "waso", "akesi", "pipi", "kala"]
 			  }
+
+
+        {
+          "word": "namako",
+          "meaning": "namako",
+          "wrongs": ["sin", "weka", "awen", "suno", "seli"]
+        },
+        {
+          "word": "kipisi",
+          "meaning": "kipisi",
+          "wrongs": ["esun", "tu", "ala", "linja"]
+        },
+        {
+          "word": "monsuta",
+          "meaning": "monsuta",
+          "wrongs": ["soweli", "pakala", "jaki"]
+        },
+        {
+          "word": "leko",
+          "meaning": "leko",
+          "wrongs": ["lipu", "nimi", "palisa", "tomo"]
+        },
+        {
+          "word": "tonsi",
+          "meaning": "tonsi",
+          "wrongs": ["mije", "meli", "jan", "suno"]
+        },
+        {
+          "word": "jasima",
+          "meaning": "jasima",
+          "wrongs": ["telo", "ala", "suno", "ike"]
+        },
+        {
+          "word": "soko",
+          "meaning": "soko",
+          "wrongs": ["mama", "kasi", "uta"]
+        },
+        {
+          "word": "meso",
+          "meaning": "meso",
+          "wrongs": ["lon", "insa", "poki", "sinpin", "monsi"]
+        },
+        {
+          "word": "epiku",
+          "meaning": "epiku",
+          "wrongs": ["nasin", "sewi", "tomo", "alasa"]
+        }
+        */
+        {
+          "word": "kokosila",
+          "meaning": "kokosila",
+          "wrongs": ["toki", "ike", "kipisi", "kalama"]
+        }
+
+
 		]
-		
+
 		const ordClassArray = ['order1', 'order2', 'order3']
-	
+
         const rootElement = document.getElementById('root')
 
         class Questioncard extends React.Component {
-		
-            
+
+
             constructor() {
                 super()
 				const linjaI = Math.floor(Math.random()*words.length)
@@ -662,7 +718,7 @@
 				this.setNewQuestion = this.setNewQuestion.bind(this)
 				this.arewethere = this.arewethere.bind(this)
             }
-			
+
 			handleClick(e) {
 
 				document.getElementById('lin').addEventListener('animationend', this.arewethere)
@@ -673,7 +729,7 @@
 					)
 				}
 				else{
-	
+
 					this.setState(
 						{transClassLinjas: 'translinjas', transClassAns: 'transanswers'}
 					)
@@ -696,11 +752,11 @@
 						{shakeClass: ''}
 					)
 				}
-				
+
 
 
 			}
-			
+
 			otherIndex(linjaI, wrong1 ) {
 				let r = Math.floor(Math.random()*words[linjaI].wrongs.length)
 				if (r !== wrong1) {
@@ -718,7 +774,7 @@
 				const wrong1 = Math.floor(Math.random()*words[linjaI].wrongs.length)
 				const wrong2 = this.otherIndex(linjaI, wrong1)
 				this.setState(
-					(prevState) => {return ( 
+					(prevState) => {return (
 						{
 						linjaIndex : linjaI,
 						orderClass : ordClassArray[Math.floor(Math.random()*ordClassArray.length)],
@@ -726,13 +782,13 @@
 						wrong2 : words[linjaI].wrongs[wrong2],
 						transClassLinjas : 'middlelinjas',
 						transClassAns: 'middleanswers',
-						
+
 						})
 					}
 				)
 
 			}
-					
+
 
 
             render() {
@@ -752,9 +808,9 @@
 								{words[this.state.linjaIndex].meaning}
 							</div>
 						</div>
-                    </div>            
+                    </div>
                 )
-            }   
+            }
         }
 
         function App(){
