@@ -10,3 +10,4 @@ Check app at: https://brunobord.github.io/o-kama-sona-e-sitelen-pona/
 
 * Cleaned up unused files & dead code
 * Upgraded linja pona font from 3.5 to 4.9. This font includes the latest nimi ku suli and other glyphs.
+* Added the missing nimi ku suli (namako, kipisi, monsuta, leko, tonsi, jasima, soko, meso, epiku, kokosila, lanpan, n, misikeke, ku)
