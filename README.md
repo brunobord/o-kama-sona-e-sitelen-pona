@@ -8,4 +8,4 @@ Check app at: https://brunobord.github.io/o-kama-sona-e-sitelen-pona/
 
 ## Changes
 
-* Cleaned up unused files
+* Cleaned up unused files & dead code

@@ -126,11 +126,6 @@ html, body, #root {
 	order: 3;
 }
 
-/*.answer:hover {
-    background-color: aliceblue;
-	border-color: cornflowerblue;
-}*/
-
 .answer:active {
 	transform: translateY(2px);
     box-shadow: none;
